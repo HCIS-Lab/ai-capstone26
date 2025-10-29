@@ -1,5 +1,5 @@
 # physical-ai-hw3
-NYCU Perception and Decision Making 2025 Fall
+NYCU Physical AI 2025 Fall
 
 In your original physical-ai directory, `git pull` to get new `hw3` directory.
 
