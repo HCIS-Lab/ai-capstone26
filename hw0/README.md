@@ -2,7 +2,8 @@
 
 NYCU AI Capstone 2026 Fall
 
-Spec: https://docs.google.com/document/d/1AGyn_86wDJFglbIqMNx1RYWl1Sz4GJe2/edit
+Spec: https://drive.google.com/file/d/1rdbRMXMCjqozzj0y5bLiu0itU2D9GrFc/view?usp=sharing
+Slide: https://docs.google.com/presentation/d/1FSDUIIN-GM05lxHIfW1OII-CdiMmDhrn/edit?usp=sharing&ouid=114385544772538729562&rtpof=true&sd=true
 
 ## Introduction 
 In this course, we are going to build an indoor navigation system in Habitat step by step during homework 1 ~ 2 and the final project. This homework 0 will help you to build the environment with essential packages.
