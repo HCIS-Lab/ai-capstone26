@@ -1,6 +1,5 @@
 # ai-capstone26
-NYCU AI CAPSTONE 2026 Spring
-## 
+## NYCU AI CAPSTONE 2026 Spring
 You can choose to create a new fork on you own GitHub account.
 
 Or `git clone https://github.com/HCIS-Lab/ai-capstone26.git` to only download a local copy.
