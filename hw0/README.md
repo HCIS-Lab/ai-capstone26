@@ -6,6 +6,8 @@ Spec: https://drive.google.com/file/d/1R2M2fLBaT8iETkZSja0vNdlWh06UssEg/view?usp
 
 Slide: https://docs.google.com/presentation/d/1FSDUIIN-GM05lxHIfW1OII-CdiMmDhrn/edit?usp=sharing&ouid=114385544772538729562&rtpof=true&sd=true
 
+for windows user: https://drive.google.com/file/d/1lAmHQKl-Lfw1P2uvEHe44BafYjCDAKm9/view?usp=sharing
+
 ## Introduction 
 In this course, we are going to build an indoor navigation system in Habitat step by step during homework 1 ~ 3 and the final project. This homework 0 will help you to build the environment with essential packages.
 
