@@ -9,40 +9,39 @@ Slide: https://docs.google.com/presentation/d/1FSDUIIN-GM05lxHIfW1OII-CdiMmDhrn/
 ## Introduction 
 In this course, we are going to build an indoor navigation system in Habitat step by step during homework 1 ~ 3 and the final project. This homework 0 will help you to build the environment with essential packages.
 
-## Requirements
-- OS : Ubuntu Desktop 18.04, 20.04
-
-    - Ubuntu on virtual machine is not recommended
-    - MacOS may work but not guaranteed
-    - WSL will not work
-    - Windows will not work
-- Python 3.7 ( You can use conda to create new environment )
-
 ## Installation
 
 ### Clone the repo
 `git clone git@github.com:HCIS-Lab/ai-capstone26.git` to download the repo or create a new fork on you own GitHub account.
 
 ```bash
-cd physical-ai25/hw0
+cd ai-capstone26
 # Ensure the latest submodules
 git submodule update --init --recursive
 # Create a conda env
-conda create -n habitat python=3.7
+conda create -n habitat python=3.9 cmake=3.19.6
 # Activate the conda env
 conda activate habitat
 # Install requirements
+cd hw0
 pip install -r requirements.txt
-# Install habitat-sim from source
-cd habitat-sim && pip install -r requirements.txt && python setup.py install --bullet && cd ..
+# Install habitat-sim 
+conda install habitat-sim=0.3.3 withbullet -c conda-forge -c aihabitat
 # Install habitat-lab
-cd habitat-lab && pip install -r requirements.txt && python setup.py develop && cd ..
+cd habitat-lab && pip install -e habitat-lab
 ```
 
 ### Download dataset
 
 Download dataset from [here](https://drive.google.com/file/d/1zHA2AYRtJOmlRaHNuXOvC_OaVxHe56M4/view)
 and put the directory under `replica_v1/`
+
+or 
+```bash
+cd replica_v1
+gdown https://drive.google.com/uc?id=1zHA2AYRtJOmlRaHNuXOvC_OaVxHe56M4 -O apartment_0.zip
+unzip apartment_0.zip
+```
 
 ## Tasks
 
