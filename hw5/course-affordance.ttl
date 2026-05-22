@@ -1,8 +1,24 @@
-@prefix cap:  <https://hcis.io/ontology/aicapstone/> .
+@prefix cap:  <https://hcis.io/ontology/aicapstone/2026/> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+
+<https://hcis.io/ontology/aicapstone/2026/>
+    a owl:Ontology ;
+    rdfs:label "AI Capstone 2026 Course Ontology"@en ;
+    rdfs:comment
+        "A reduced educational ontology profile for semantic and affordance grounding of graspable objects in the AI Capstone 2026 course project."@en ;
+    dcterms:title "AI Capstone 2026 Course Ontology"@en ;
+    dcterms:description
+        "This ontology defines a compact course vocabulary for representing physical task objects, task roles, manipulation affordances, grounding identifiers, and inferable graspability in the AI Capstone 2026 Physical AI project."@en ;
+    dcterms:creator "AI Capstone Course Team"@en ;
+    dcterms:created "2026-05-22"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    vann:preferredNamespacePrefix "cap" ;
+    vann:preferredNamespaceUri "https://hcis.io/ontology/aicapstone/2026/" .
 
 cap:PhysicalObject
     a owl:Class ;
