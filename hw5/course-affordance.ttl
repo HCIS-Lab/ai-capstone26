@@ -5,6 +5,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+
+# Ontology Metadata
 
 <https://hcis.io/ontology/aicapstone/2026>
     a owl:Ontology ;
@@ -14,11 +17,16 @@
     dcterms:title "AI Capstone 2026 Course Ontology"@en ;
     dcterms:description
         "This ontology defines a compact course vocabulary for representing physical task objects, task roles, manipulation affordances, grounding identifiers, and inferable graspability in the AI Capstone 2026 Physical AI project."@en ;
-    dcterms:creator "AI Capstone Course Team"@en ;
+    dcterms:creator cap:ccyont ;
     dcterms:created "2026-05-22"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     vann:preferredNamespacePrefix "cap" ;
     vann:preferredNamespaceUri "https://hcis.io/ontology/aicapstone/2026/" .
+
+cap:ccyont
+    a foaf:Person ;
+    foaf:name "Chun-yien Chang"@en ;
+    foaf:mbox <mailto:ccy@hptp.org> .
 
 # Core Classes
 
@@ -192,7 +200,7 @@ cap:hasApproxWidth
     rdfs:domain cap:PhysicalObject ;
     rdfs:range xsd:decimal ;
 
-# Course Object Layer
+# Course Objects
 
 cap:Cup
     a owl:Class ;
