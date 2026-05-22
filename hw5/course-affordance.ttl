@@ -6,7 +6,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix vann:    <http://purl.org/vocab/vann/> .
 
-<https://hcis.io/ontology/aicapstone/2026/>
+<https://hcis.io/ontology/aicapstone/2026>
     a owl:Ontology ;
     rdfs:label "AI Capstone 2026 Course Ontology"@en ;
     rdfs:comment
@@ -19,6 +19,8 @@
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     vann:preferredNamespacePrefix "cap" ;
     vann:preferredNamespaceUri "https://hcis.io/ontology/aicapstone/2026/" .
+
+# Core Classes
 
 cap:PhysicalObject
     a owl:Class ;
@@ -119,6 +121,8 @@ cap:CollectableObject
     rdfs:comment
         "A task role for an object that should be collected into another object or location."@en .
 
+# Properties
+
 cap:hasAffordance
     a owl:ObjectProperty ;
     rdfs:domain cap:PhysicalObject ;
@@ -160,7 +164,7 @@ cap:canBeManipulatedBy
         "Relates a physical object to an end effector capable of manipulating it."@en .
 
 cap:hasColor
-    a owl:DataProperty ;
+    a owl:DatatypeProperty ;
     rdfs:domain cap:PhysicalObject ;
     rdfs:range xsd:string ;
     rdfs:label "has color"@en ;
@@ -168,7 +172,7 @@ cap:hasColor
         "Records the perceived or assigned color of a physical object."@en .
 
 cap:hasObjectLabel
-    a owl:DataProperty ;
+    a owl:DatatypeProperty ;
     rdfs:domain cap:PhysicalObject ;
     rdfs:range xsd:string ;
     rdfs:label "has object label"@en ;
@@ -176,7 +180,7 @@ cap:hasObjectLabel
         "Records the object label used by perception, simulation, or task documentation."@en .
 
 cap:hasPoseFrame
-    a owl:DataProperty ;
+    a owl:DatatypeProperty ;
     rdfs:domain cap:PhysicalObject ;
     rdfs:range xsd:string ;
     rdfs:label "has pose frame"@en ;
@@ -184,9 +188,88 @@ cap:hasPoseFrame
         "Links an ontology individual to a coordinate frame or pose-frame identifier used in perception, reconstruction, or simulation."@en .
 
 cap:hasApproxWidth
-    a owl:DataProperty ;
+    a owl:DatatypeProperty ;
     rdfs:domain cap:PhysicalObject ;
     rdfs:range xsd:decimal ;
+
+# Course Object Layer
+
+cap:Cup
+    a owl:Class ;
+    rdfs:subClassOf cap:PhysicalObject ;
+    rdfs:label "cup"@en ;
+    rdfs:comment
+        "A container-like object used in the cup-stacking task."@en ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty cap:hasAffordance ;
+        owl:someValuesFrom cap:GraspingAffordance
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty cap:hasAffordance ;
+        owl:someValuesFrom cap:StackabilityAffordance
+    ] .
+
+cap:Knife
+    a owl:Class ;
+    rdfs:subClassOf cap:PhysicalObject ;
+    rdfs:label "knife"@en ;
+    rdfs:comment
+        "A cutlery object to be placed in the cutlery-arrangement task."@en ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty cap:hasAffordance ;
+        owl:someValuesFrom cap:GraspingAffordance
+    ] .
+
+cap:Fork
+    a owl:Class ;
+    rdfs:subClassOf cap:PhysicalObject ;
+    rdfs:label "fork"@en ;
+    rdfs:comment
+        "A cutlery object to be placed in the cutlery-arrangement task."@en ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty cap:hasAffordance ;
+        owl:someValuesFrom cap:GraspingAffordance
+    ] .
+
+cap:Plate
+    a owl:Class ;
+    rdfs:subClassOf cap:PhysicalObject ;
+    rdfs:label "plate"@en ;
+    rdfs:comment
+        "A reference object used for arranging cutlery in the cutlery-arrangement task."@en ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty cap:hasAffordance ;
+        owl:someValuesFrom cap:SupportAffordance
+    ] .
+
+cap:ToyBlock
+    a owl:Class ;
+    rdfs:subClassOf cap:PhysicalObject ;
+    rdfs:label "toy block"@en ;
+    rdfs:comment
+        "A small object to be collected into the basket in the toy-block-collection task."@en ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty cap:hasAffordance ;
+        owl:someValuesFrom cap:GraspingAffordance
+    ] .
+
+cap:Basket
+    a owl:Class ;
+    rdfs:subClassOf cap:PhysicalObject ;
+    rdfs:label "basket"@en ;
+    rdfs:comment
+        "A container target used to receive toy blocks in the toy-block-collection task."@en ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty cap:hasAffordance ;
+        owl:someValuesFrom cap:ContainmentAffordance
+    ] .
     rdfs:label "has approximate width"@en ;
     rdfs:comment
         "Records an approximate object width, which may be useful for checking whether an object fits within a gripper capability."@en .
