@@ -17,12 +17,4 @@ This folder contains the specification and starter ontology resources for Homewo
 
 Each group should submit a GitHub repository following the structure specified in the homework document. The submitted repository should include the group-authored ontology, imported ontology files, inferred results, SPARQL queries, query outputs, screenshots when appropriate, and a report or README explaining the modeling and reasoning workflow.
 
-## Notes
-
-- The main group ontology should be developed as `ontology/group-ontology.ttl`.
-- The provided `course-affordance.ttl` should be placed under `ontology/imports/` in the submitted repository.
-- The inferred graph should be saved as `ontology/inferred-results.ttl`.
-- The graspable-object query should be saved as `queries/graspable_objects.rq`.
-- Query outputs should be saved under `results/`.
-
 Questions about the homework may be sent to: `ccy@hptp.org`.
